@@ -2,7 +2,7 @@ import './App.css';
 import "react-toastify/dist/ReactToastify.css";
 
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import { HOME, PREFERENCES, PAGE404 } from '../routes.js';
+import { HOME, PREFERENCES } from '../routes.js';
 
 import Layout from "./pages/Layout.jsx";
 import Home from "./pages/Home.jsx";

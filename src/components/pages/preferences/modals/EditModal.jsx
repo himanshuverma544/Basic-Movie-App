@@ -5,7 +5,7 @@ import { useState, useCallback } from "react";
 
 const EditModal = ({ movieData, setLocalMovies, closeModal }) => {
 
-  const [url, setUrl] = useState(movieData.url);
+  const [url, setUrl] = useState("");
   const [rating, setRating] = useState(movieData.rating);
 
   const handleEdit = e => {
@@ -49,7 +49,7 @@ const EditModal = ({ movieData, setLocalMovies, closeModal }) => {
                 id="user-movie-image-url"
                 name="user-movie-image-url"
                 type="text"
-                className="text-center border px-2 py-1"
+                className="text-center border px-2 py-1 rounded"
                 placeholder="Enter URL"
                 value={url}
                 onChange={e => setUrl(e.target.value)}
@@ -64,7 +64,7 @@ const EditModal = ({ movieData, setLocalMovies, closeModal }) => {
                 id="user-rating-input"
                 name="user-rating"
                 type="text"
-                className="text-center border px-2 py-1"
+                className="text-center border px-2 py-1 rounded"
                 placeholder="Enter Rating"
                 defaultValue={movieData.rating}
                 value={rating}
@@ -76,7 +76,7 @@ const EditModal = ({ movieData, setLocalMovies, closeModal }) => {
               Submit
             </button>
 
-            <button className="px-3 py-1 rounded bg-black text-white" onClick={closeModal}>
+            <button className="px-3 py-1 rounded text-sm mt-1 bg-black text-white" onClick={closeModal}>
               Close Modal
             </button>
 
